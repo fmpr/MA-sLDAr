@@ -45,7 +45,7 @@ Usage::
 
 Data format: 
 
-* [labels] is a file where each line is the corresponding true label for [data].
+* [label] is a file where each line is the corresponding true target/response variable for [data].
 
 Example:: 
 
