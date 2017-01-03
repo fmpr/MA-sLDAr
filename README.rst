@@ -8,10 +8,10 @@ MA-sLDAr -- Multi-Annotator Supervised LDA for regression
 
 A version of this model for classification tasks is available `here <https://github.com/fmpr/MA-sLDAc>`_.
 
-Sample multiple-annotator data using the 20newsgroups dataset is provided `here <http://www.fprodrigues.com/20newsgroups.tar.gz>`_. More datasets are available `here <http://www.fprodrigues.com/software/ma-sldac-multi-annotator-supervised-lda-for-classification/>`_. 
+Sample multiple-annotator data using the we8there dataset is provided `here <http://www.fprodrigues.com/we8there.tar.gz>`_. More datasets are available `here <http://www.fprodrigues.com/ma-sldar-multi-annotator-supervised-lda-for-regression/>`_. 
 
-`MA-sLDAc` is open source software released under the `GNU LGPL license <http://www.gnu.org/licenses/lgpl.html>`_.
-Copyright (c) 2015-now Filipe Rodrigues
+`MA-sLDAr` is open source software released under the `GNU LGPL license <http://www.gnu.org/licenses/lgpl.html>`_.
+Copyright (c) 2016-now Filipe Rodrigues
 
 Compiling
 ------------
@@ -25,7 +25,7 @@ Estimation
 
 Usage:: 
 
-    ./maslda est [data] [answers] [settings] [alpha] [k] [random/seeded/model_path] [seed]
+    ./maslda est [data] [answers] [settings] [alpha] [tau] [k] [random/seeded/model_path] [seed] [directory]
 
 Data format:
 
@@ -34,14 +34,14 @@ Data format:
 
 Example:: 
 
-    ./maslda est ../20newsgroups/data_train.txt ../20newsgroups/answers.txt settings.txt 0.1 5 random 1 output
+    ./maslda est ../MovieReviews/data_train_amt.txt ../MovieReviews/answers.txt settings.txt 1 0.1 20 random 1 output
 
 Inference
 ------------
 
 Usage:: 
 
-    maslda inf [data] [labels] [settings] [model] [directory]
+    ./maslda inf [data] [label] [settings] [model] [directory]
 
 Data format: 
 
@@ -49,15 +49,15 @@ Data format:
 
 Example:: 
 
-    ./maslda inf ../20newsgroups/data_test.txt ../20newsgroups/labels_test.txt settings.txt output/final.model output
+    ./maslda inf ../MovieReviews/data_test.txt ../MovieReviews/labels_test.txt settings.txt output/final.model output
 
 Settings
 ------------
 
 The settings file specifies the following parameters:
 
-* "labels file" is a file with the true labels for the training documents. If a valid file is provided, it will be use to compute and report error statistics during the model estimation.
-* "pi estimate" or "pi fixed" determines whether of not the confusion matrices of the different should be estimated or kept fixed to the values provided by "pi file".
-* "pi file" is a file with the true confusion matrices of the multiple annotators. If a valid file is provided, it will be use to compute and report error statistics during the model estimation.
-* "pi laplace smoother" and "lambda laplace smoother" define the values of the laplace smoothers used when estimating pi and lambda respectively.
+* "L2 penalty" controls the strength of the L2 regularization.
+* "labels train file" is a file with the true target variables for the training documents. If a valid file is provided, it will be use to compute and report error statistics during the model estimation.
+* "annotators quality file" is a file with the true biases and variances of the multiple annotators. If a valid file is provided, it will be use to compute and report error statistics during the model estimation.
+* "lambda smoother" defines the values of the laplace smoothers used when estimating pi and lambda respectively.
 

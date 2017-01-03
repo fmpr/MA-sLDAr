@@ -1,0 +1,9 @@
+var max iter 100
+var convergence 1e-3
+em max iter 200
+em convergence 1e-4
+L2 penalty 0.1
+alpha nfixed
+labels train file ../MovieReviews/labels_train_amt.txt
+annotators quality file ../MovieReviews/reg_ann.txt
+lambda smoother 0.0000000000000000000000001
