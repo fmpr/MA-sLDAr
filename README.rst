@@ -8,7 +8,7 @@ MA-sLDAr -- Multi-Annotator Supervised LDA for regression
 
 A version of this model for classification tasks is available `here <https://github.com/fmpr/MA-sLDAc>`_.
 
-Sample multiple-annotator data using the we8there dataset is provided `here <http://www.fprodrigues.com/we8there.tar.gz>`_. More datasets are available `here <http://www.fprodrigues.com/ma-sldar-multi-annotator-supervised-lda-for-regression/>`_. 
+Sample multiple-annotator data using the MovieReviews dataset is provided `here <http://www.fprodrigues.com/MovieReviews.tar.gz>`_. More datasets are available `here <http://www.fprodrigues.com/ma-sldar-multi-annotator-supervised-lda-for-regression/>`_. 
 
 `MA-sLDAr` is open source software released under the `GNU LGPL license <http://www.gnu.org/licenses/lgpl.html>`_.
 Copyright (c) 2016-now Filipe Rodrigues
