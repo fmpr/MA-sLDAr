@@ -30,7 +30,7 @@ Usage::
 Data format:
 
 * [data] is a file where each line is of the form: [M] [term_1]:[count] [term_2]:[count] ...  [term_N]:[count], where [M] is the number of unique terms in the document, and the [count] associated with each term is how many times that term appeared in the document. 
-* [answers] is a file where each line contains the labels of the different annotators (separated by a white space) for [data]. Each column therefore corresponds to all the answers of an annotator. The labels must be 0, 1, ..., C-1, if we have C classes. Missing answers are encoded using "-1".
+* [answers] is a file where each line contains the target/response variable of the different annotators (separated by a white space) for [data]. Each column therefore corresponds to all the answers of an annotator. 
 
 Example:: 
 
