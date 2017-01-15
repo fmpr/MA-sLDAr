@@ -10,8 +10,14 @@ A version of this model for classification tasks is available `here <https://git
 
 Sample multiple-annotator data using the MovieReviews dataset is provided `here <http://www.fprodrigues.com/MovieReviews.tar.gz>`_. More datasets are available `here <http://www.fprodrigues.com/ma-sldar-multi-annotator-supervised-lda-for-regression/>`_. 
 
-`MA-sLDAr` is open source software released under the `GNU LGPL license <http://www.gnu.org/licenses/lgpl.html>`_.
-Copyright (c) 2016-now Filipe Rodrigues
+Copyright (c) 2016 Filipe Rodrigues
+
+This program is free software. You can redistribute it and/or modify it under the terms of the GNU General Public License, version 3, as published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+Appropriate reference to this software should be made when describing research in which it played a substantive role, so that it may be replicated and verified by others.
+
 
 Compiling
 ------------
